@@ -9,7 +9,7 @@ This project proposes the development of an autonomous system for plant health m
 - [ ] Update BOM File.
 - [ ] Integrate a full stack development (FSD) with Mosquito, Node-RED, InfluxDB and Grafana.
 - [ ] Design of structure.
-- [x] PCB design
+- [x] PCB design **(Organize sections of the PCB)**
 - [ ] ESP32 code with deep sleep mode.
 - [ ] Integrate IP Webcam in FSD.
 - [x] Power consumption calculations.
