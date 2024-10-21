@@ -13,6 +13,7 @@ This project proposes the development of an autonomous system for plant health m
 - [ ] ESP32 code with deep sleep mode.
 - [ ] Integrate IP Webcam in FSD.
 - [x] Power consumption calculations.
+- [ ] Add circuit schematic and PCB schematic (PDF).
 
 ## Notes:
 - MICAS: Measurement, Instrumentation, Control, and Automatization System
