@@ -1,0 +1,14 @@
+# Ignorar todo el contenido de mosquitto/data y mosquitto/log
+mosquitto/data/*
+mosquitto/log/*
+node-red/data/.npm/*
+ESP32mqtt/*
+node-red/data/.config.nodes.json
+node-red/data/.config.nodes.json.backup
+node-red/data/.flows.json.backup
+
+# Pero permitir mantener los directorios vacíos con un archivo .gitkeep
+!mosquitto/data/.gitkeep
+!mosquitto/log/.gitkeep
+!node-red/data/.npm/.gitkeep
+!ESP32mqtt/.gitkeep
