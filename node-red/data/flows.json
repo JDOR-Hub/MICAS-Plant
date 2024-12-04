@@ -39,40 +39,23 @@
         "sessionExpiry": ""
     },
     {
-        "id": "a1fc13e601d76e43",
-        "type": "ui_group",
-        "name": "MICAS",
-        "tab": "c8419e15725d4cf5",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c8419e15725d4cf5",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "28ec5d5d2632bf8b",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
                 "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
@@ -82,44 +65,44 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
+                    "default": "#097479",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
                     "value": "#111111",
                     "edited": false
                 },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "base-font": {
@@ -154,6 +137,78 @@
         }
     },
     {
+        "id": "59aa16cb38727bb8",
+        "type": "ui_spacer",
+        "z": "81ef8bc284bbde66",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2a54932b2aaf9329",
+        "type": "ui_spacer",
+        "z": "81ef8bc284bbde66",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "eabb2284b8c6c4e7",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8073acb1ebd73039",
+        "type": "ui_group",
+        "name": "Soil Humidity",
+        "tab": "eabb2284b8c6c4e7",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2d62697812539112",
+        "type": "ui_group",
+        "name": "Soil Temperature",
+        "tab": "eabb2284b8c6c4e7",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "919b4ac83a633494",
+        "type": "ui_group",
+        "name": "Pump state",
+        "tab": "eabb2284b8c6c4e7",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "342885748b856fbe",
+        "type": "ui_group",
+        "name": "Nutrients",
+        "tab": "eabb2284b8c6c4e7",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "208f608e64cbb66a",
         "type": "mqtt in",
         "z": "81ef8bc284bbde66",
@@ -167,33 +222,268 @@
         "rh": 0,
         "inputs": 0,
         "x": 260,
-        "y": 160,
+        "y": 80,
         "wires": [
             [
-                "ba2da87033fcca24",
-                "069af3b78d2fd770"
+                "69bb7976f8177f10"
             ]
         ]
     },
     {
-        "id": "ba2da87033fcca24",
+        "id": "c6a86c0cbd68a0e5",
+        "type": "mqtt in",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "topic": "esp32/SOILHUM",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f808c0a41db68dd9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 180,
+        "wires": [
+            [
+                "992f27c6b7b8db1b"
+            ]
+        ]
+    },
+    {
+        "id": "03f9d132c9e47581",
+        "type": "mqtt in",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "topic": "esp32/PUMPSTATE",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f808c0a41db68dd9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 660,
+        "wires": [
+            [
+                "d73ce98698c04e7b"
+            ]
+        ]
+    },
+    {
+        "id": "d73ce98698c04e7b",
+        "type": "json",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 660,
+        "wires": [
+            [
+                "8294dea960c4da61",
+                "464a7143c79043cf"
+            ]
+        ]
+    },
+    {
+        "id": "db41b8b10384f45d",
+        "type": "ui_gauge",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "group": "2d62697812539112",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Soil Temp",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 600,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1088cecff5d83b8f",
+        "type": "ui_text",
+        "z": "81ef8bc284bbde66",
+        "group": "8073acb1ebd73039",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "898d263b899612a9",
+        "type": "ui_text",
+        "z": "81ef8bc284bbde66",
+        "group": "2d62697812539112",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "69bb7976f8177f10",
+        "type": "json",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "1088cecff5d83b8f",
+                "a84cb02471395228"
+            ]
+        ]
+    },
+    {
+        "id": "992f27c6b7b8db1b",
+        "type": "json",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "898d263b899612a9",
+                "db41b8b10384f45d"
+            ]
+        ]
+    },
+    {
+        "id": "8294dea960c4da61",
+        "type": "ui_led",
+        "z": "81ef8bc284bbde66",
+        "order": 0,
+        "group": "919b4ac83a633494",
+        "width": 0,
+        "height": 0,
+        "label": "OFF",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 590,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "464a7143c79043cf",
+        "type": "ui_led",
+        "z": "81ef8bc284bbde66",
+        "order": 0,
+        "group": "919b4ac83a633494",
+        "width": 0,
+        "height": 0,
+        "label": "ON",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#eeff00",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 590,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b51a21e0c1b19906",
+        "type": "mqtt in",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "topic": "esp32/NITRATE ",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f808c0a41db68dd9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 280,
+        "wires": [
+            [
+                "b23db403d56ba5cb"
+            ]
+        ]
+    },
+    {
+        "id": "38a0dbb3e0d6eae4",
         "type": "ui_chart",
         "z": "81ef8bc284bbde66",
         "name": "",
-        "group": "a1fc13e601d76e43",
-        "order": 0,
-        "width": "6",
-        "height": "5",
-        "label": "HUMIDITY %",
+        "group": "342885748b856fbe",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Nitrate",
         "chartType": "line",
-        "legend": "true",
+        "legend": "false",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": "10",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
         "removeOlderPoints": "",
         "removeOlderUnit": "60",
         "cutout": 0,
@@ -213,31 +503,284 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 500,
-        "y": 160,
+        "x": 610,
+        "y": 280,
         "wires": [
             []
         ]
     },
     {
-        "id": "069af3b78d2fd770",
+        "id": "ee8a3359bc932176",
+        "type": "ui_chart",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "group": "342885748b856fbe",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Potassium",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "371d7f41d64f0824",
+        "type": "ui_chart",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "group": "342885748b856fbe",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Phosphorus",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b23db403d56ba5cb",
+        "type": "json",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "38a0dbb3e0d6eae4",
+                "1a65998d24947e66"
+            ]
+        ]
+    },
+    {
+        "id": "cc84455be987963c",
+        "type": "json",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "ee8a3359bc932176",
+                "8692b78b02a20b37"
+            ]
+        ]
+    },
+    {
+        "id": "b981ce1fe6c9405b",
+        "type": "json",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "371d7f41d64f0824",
+                "c3601549e8a7e3bd"
+            ]
+        ]
+    },
+    {
+        "id": "38eb8b2c48274a5a",
+        "type": "mqtt in",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "topic": "esp32/POTASSIUM",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f808c0a41db68dd9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "cc84455be987963c",
+                "38a0dbb3e0d6eae4"
+            ]
+        ]
+    },
+    {
+        "id": "b4c2ae0f012464d8",
+        "type": "mqtt in",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "topic": "esp32/PHOSPHORUS",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f808c0a41db68dd9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 520,
+        "wires": [
+            [
+                "b981ce1fe6c9405b",
+                "38a0dbb3e0d6eae4"
+            ]
+        ]
+    },
+    {
+        "id": "a84cb02471395228",
+        "type": "ui_gauge",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "group": "8073acb1ebd73039",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Soil Humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8692b78b02a20b37",
         "type": "ui_text",
         "z": "81ef8bc284bbde66",
-        "group": "a1fc13e601d76e43",
-        "order": 1,
+        "group": "342885748b856fbe",
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Humidity",
+        "label": "Potassium",
         "format": "{{msg.payload}}",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 500,
-        "y": 220,
+        "x": 630,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1a65998d24947e66",
+        "type": "ui_text",
+        "z": "81ef8bc284bbde66",
+        "group": "342885748b856fbe",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nitrate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 610,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c3601549e8a7e3bd",
+        "type": "ui_text",
+        "z": "81ef8bc284bbde66",
+        "group": "342885748b856fbe",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Phosphorus",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 560,
         "wires": []
     }
 ]
