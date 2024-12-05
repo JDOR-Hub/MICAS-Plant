@@ -185,7 +185,7 @@
         "type": "ui_group",
         "name": "Soil Variables",
         "tab": "eabb2284b8c6c4e7",
-        "order": 2,
+        "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -196,7 +196,7 @@
         "type": "ui_group",
         "name": "Environment Variables",
         "tab": "eabb2284b8c6c4e7",
-        "order": 3,
+        "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -205,9 +205,9 @@
     {
         "id": "919b4ac83a633494",
         "type": "ui_group",
-        "name": "Pumps Status",
+        "name": "Pumps and electrovalve Status",
         "tab": "eabb2284b8c6c4e7",
-        "order": 5,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -248,8 +248,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 200,
-        "y": 120,
+        "x": 120,
+        "y": 80,
         "wires": [
             [
                 "69bb7976f8177f10"
@@ -264,8 +264,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 370,
-        "y": 120,
+        "x": 290,
+        "y": 80,
         "wires": [
             [
                 "a84cb02471395228"
@@ -282,7 +282,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "Soil Humidity",
+        "title": "Soil Humidity [%]",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -296,8 +296,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 530,
-        "y": 120,
+        "x": 470,
+        "y": 80,
         "wires": []
     },
     {
@@ -313,8 +313,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 210,
-        "y": 180,
+        "x": 130,
+        "y": 140,
         "wires": [
             [
                 "992f27c6b7b8db1b"
@@ -331,7 +331,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "Soil Temperature",
+        "title": "Soil Temperature [°C]",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -345,8 +345,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 550,
-        "y": 180,
+        "x": 480,
+        "y": 140,
         "wires": []
     },
     {
@@ -357,8 +357,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 370,
-        "y": 180,
+        "x": 290,
+        "y": 140,
         "wires": [
             [
                 "db41b8b10384f45d"
@@ -370,7 +370,7 @@
         "type": "mqtt in",
         "z": "f0f60bdf61a0c07e",
         "name": "",
-        "topic": "esp32/SOILNUTN ",
+        "topic": "esp32/SOILNUTN",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "f808c0a41db68dd9",
@@ -378,8 +378,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 790,
-        "y": 100,
+        "x": 710,
+        "y": 60,
         "wires": [
             [
                 "b23db403d56ba5cb"
@@ -395,21 +395,21 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "label": "Nitrate",
+        "label": "Nitrate [mg/kg]",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "",
-        "ymax": "",
+        "ymin": "0",
+        "ymax": "120",
         "removeOlder": "5",
         "removeOlderPoints": "",
         "removeOlderUnit": "60",
         "cutout": 0,
         "useOneColor": false,
-        "useUTC": false,
+        "useUTC": true,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -424,8 +424,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1110,
-        "y": 100,
+        "x": 1060,
+        "y": 60,
         "wires": [
             []
         ]
@@ -439,21 +439,21 @@
         "order": 4,
         "width": 0,
         "height": 0,
-        "label": "Potassium",
+        "label": "Potassium [mg/kg]",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "",
-        "ymax": "",
+        "ymin": "0",
+        "ymax": "120",
         "removeOlder": 1,
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
-        "useUTC": false,
+        "useUTC": true,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -468,8 +468,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1130,
-        "y": 220,
+        "x": 1070,
+        "y": 180,
         "wires": [
             []
         ]
@@ -483,21 +483,21 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "label": "Phosphorus",
+        "label": "Phosphorus [mg/kg]",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "",
-        "ymax": "",
+        "ymin": "0",
+        "ymax": "120",
         "removeOlder": 1,
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
-        "useUTC": false,
+        "useUTC": true,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -512,8 +512,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1130,
-        "y": 380,
+        "x": 1080,
+        "y": 340,
         "wires": [
             []
         ]
@@ -526,8 +526,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 970,
-        "y": 100,
+        "x": 890,
+        "y": 60,
         "wires": [
             [
                 "38a0dbb3e0d6eae4",
@@ -543,8 +543,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 950,
-        "y": 220,
+        "x": 870,
+        "y": 180,
         "wires": [
             [
                 "ee8a3359bc932176",
@@ -560,8 +560,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 970,
-        "y": 380,
+        "x": 890,
+        "y": 340,
         "wires": [
             [
                 "371d7f41d64f0824",
@@ -582,8 +582,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 770,
-        "y": 220,
+        "x": 690,
+        "y": 180,
         "wires": [
             [
                 "cc84455be987963c"
@@ -603,8 +603,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 770,
-        "y": 380,
+        "x": 690,
+        "y": 340,
         "wires": [
             [
                 "b981ce1fe6c9405b"
@@ -620,7 +620,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Current Potassium",
+        "label": "Current Potassium [mg/kg]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -628,8 +628,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1150,
-        "y": 280,
+        "x": 1100,
+        "y": 240,
         "wires": []
     },
     {
@@ -641,7 +641,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Current Nitrate",
+        "label": "Current Nitrate [mg/kg]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -649,8 +649,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1140,
-        "y": 140,
+        "x": 1080,
+        "y": 100,
         "wires": []
     },
     {
@@ -662,7 +662,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Current Phosphorus",
+        "label": "Current Phosphorus [mg/kg]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -670,8 +670,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1160,
-        "y": 420,
+        "x": 1100,
+        "y": 380,
         "wires": []
     },
     {
@@ -687,8 +687,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
-        "y": 100,
+        "x": 120,
+        "y": 60,
         "wires": [
             [
                 "92bd967bb84894ec"
@@ -705,7 +705,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "Environment humidity",
+        "title": "Environment humidity [%]",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -719,8 +719,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 100,
+        "x": 490,
+        "y": 60,
         "wires": []
     },
     {
@@ -731,8 +731,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 390,
-        "y": 100,
+        "x": 290,
+        "y": 60,
         "wires": [
             [
                 "19760877d2d0b38d"
@@ -752,8 +752,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 230,
-        "y": 220,
+        "x": 130,
+        "y": 180,
         "wires": [
             [
                 "b1daffd01d9f5c90"
@@ -770,7 +770,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "Environment Temperature",
+        "title": "Environment Temperature [°C]",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -784,8 +784,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 590,
-        "y": 220,
+        "x": 510,
+        "y": 180,
         "wires": []
     },
     {
@@ -796,8 +796,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 390,
-        "y": 220,
+        "x": 290,
+        "y": 180,
         "wires": [
             [
                 "de876b2c8691ef5e"
@@ -814,7 +814,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "Solar intensity ",
+        "title": "Solar intensity  [LUZ]",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -828,8 +828,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 340,
+        "x": 500,
+        "y": 300,
         "wires": []
     },
     {
@@ -845,8 +845,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 240,
-        "y": 340,
+        "x": 140,
+        "y": 300,
         "wires": [
             [
                 "6f1857fdc91f3b05"
@@ -861,8 +861,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 410,
-        "y": 340,
+        "x": 310,
+        "y": 300,
         "wires": [
             [
                 "bce68e8f919e93cb"
@@ -882,8 +882,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 560,
+        "x": 170,
+        "y": 500,
         "wires": [
             [
                 "492e913a01b28680"
@@ -898,8 +898,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 330,
-        "y": 560,
+        "x": 350,
+        "y": 500,
         "wires": [
             [
                 "c92b8abd8960a61d"
@@ -919,8 +919,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 320,
+        "x": 170,
+        "y": 80,
         "wires": [
             [
                 "3513ab71548c2164"
@@ -935,8 +935,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 350,
-        "y": 320,
+        "x": 370,
+        "y": 80,
         "wires": [
             [
                 "1e3234c5bfc69318",
@@ -967,9 +967,10 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 470,
-        "y": 300,
-        "wires": []
+        "x": 490,
+        "y": 60,
+        "wires": [],
+        "info": "led off WP1S"
     },
     {
         "id": "17d587af9230b60d",
@@ -993,9 +994,10 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 470,
-        "y": 340,
-        "wires": []
+        "x": 490,
+        "y": 100,
+        "wires": [],
+        "info": "led ON WP1S"
     },
     {
         "id": "c6ec0593b3961496",
@@ -1010,8 +1012,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 420,
+        "x": 170,
+        "y": 180,
         "wires": [
             [
                 "26e5588e3b819302"
@@ -1026,8 +1028,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 350,
-        "y": 420,
+        "x": 370,
+        "y": 180,
         "wires": [
             [
                 "19801ea537dce518",
@@ -1058,9 +1060,10 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 470,
-        "y": 400,
-        "wires": []
+        "x": 490,
+        "y": 160,
+        "wires": [],
+        "info": "led off WP2S"
     },
     {
         "id": "24b2b6fad413b204",
@@ -1084,9 +1087,10 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 470,
-        "y": 440,
-        "wires": []
+        "x": 490,
+        "y": 200,
+        "wires": [],
+        "info": "led on WP2S"
     },
     {
         "id": "c92b8abd8960a61d",
@@ -1110,8 +1114,8 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
-        "x": 490,
-        "y": 560,
+        "x": 510,
+        "y": 500,
         "wires": []
     },
     {
@@ -1131,8 +1135,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 660,
-        "y": 320,
+        "x": 680,
+        "y": 80,
         "wires": []
     },
     {
@@ -1152,8 +1156,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 660,
-        "y": 420,
+        "x": 680,
+        "y": 180,
         "wires": []
     },
     {
@@ -1169,8 +1173,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 170,
-        "y": 640,
+        "x": 190,
+        "y": 580,
         "wires": [
             [
                 "7df7f85d9b5af923"
@@ -1185,8 +1189,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 330,
-        "y": 640,
+        "x": 350,
+        "y": 580,
         "wires": [
             [
                 "cec7343bc1ab3e70"
@@ -1215,8 +1219,122 @@
         "shape": "circle",
         "showGlow": true,
         "name": "",
+        "x": 510,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5d41565b082c18c7",
+        "type": "mqtt in",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "topic": "esp32/EVS",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f808c0a41db68dd9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "eb1ff358955c107b"
+            ]
+        ]
+    },
+    {
+        "id": "eb1ff358955c107b",
+        "type": "json",
+        "z": "81ef8bc284bbde66",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "acb5255ca38b2623",
+                "0ba4c7244330f6de",
+                "c7e7ff9142041a8b"
+            ]
+        ]
+    },
+    {
+        "id": "acb5255ca38b2623",
+        "type": "ui_led",
+        "z": "81ef8bc284bbde66",
+        "order": 9,
+        "group": "919b4ac83a633494",
+        "width": 0,
+        "height": 0,
+        "label": "OFF",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
         "x": 490,
-        "y": 640,
+        "y": 280,
+        "wires": [],
+        "info": "led off LVLVAL"
+    },
+    {
+        "id": "0ba4c7244330f6de",
+        "type": "ui_led",
+        "z": "81ef8bc284bbde66",
+        "order": 8,
+        "group": "919b4ac83a633494",
+        "width": 0,
+        "height": 0,
+        "label": "ON",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#eeff00",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 490,
+        "y": 320,
+        "wires": [],
+        "info": "led on LVLVAL"
+    },
+    {
+        "id": "c7e7ff9142041a8b",
+        "type": "ui_text",
+        "z": "81ef8bc284bbde66",
+        "group": "919b4ac83a633494",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Electro valve",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 300,
         "wires": []
     }
 ]
