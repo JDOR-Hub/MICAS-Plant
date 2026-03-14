@@ -27,7 +27,7 @@ MICAS is an IoT-based system for monitoring and automating irrigation and fertil
 11. MAX485 (RS485 to TTL)
 
 ## Schematic Diagrams
-- [MICAS_SCH.pdf](Docs/MICAS_SCH.pdf)
+- [MICAS_SCH](Docs/MICAS_SCH.pdf)
 - [Docs/MICAS_SCHEM](Docs/MICAS_SCHEM.pdf)
 - [MICAS_PCB](Docs/MICAS_PCB.pdf)
 
